@@ -22,8 +22,18 @@ const app = express();
 app.use(cors({
     origin: 'http://localhost:3000', // Adjust this based on your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Adjust allowed methods as needed
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
     credentials: true // Allow cookies to be sent across domains
 }));
+
+// app.options('*', cors({
+//     origin: 'https://shopstore-frontend.vercel.app',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//     credentials: true
+// }));
+
+
 app.use(bodyParser.json()); // Ensure this line is present
 
 app.use(express.json())

@@ -490,8 +490,10 @@ export const getSessionId = async (req, res) => {
         const customerId = username.replace(/\s+/g, '-');
 
         // Set up the environment and credentials correctly
-        Cashfree.XClientId = "TEST10315397bb2415133900e18ad5d479351301";
-        Cashfree.XClientSecret = "cfsk_ma_test_e3a9099cce2f393e31ad569258290342_244c513e";
+        // Cashfree.XClientId = "TEST10315397bb2415133900e18ad5d479351301";
+        Cashfree.XClientId = process.env.APP_ID;
+        // Cashfree.XClientSecret = "cfsk_ma_test_e3a9099cce2f393e31ad569258290342_244c513e";
+        Cashfree.XClientSecret = process.env.SECRET_KEY;
         Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
         // Create a unique order ID

@@ -1,0 +1,205 @@
+#scroller {
+  background-color: white; /* Updated background color */
+  overflow: hidden; /* Ensure no overflow visible */
+  height: 20vh; /* Adjusted height */
+  position: relative; /* Ensures proper positioning */
+  margin-top: -50px; /* Adds space above the scroller */
+  padding: 20px 0; /* Padding for top and bottom */
+}
+
+#scroller h1 {
+  font-size: 8vw;
+  color: black; /* Updated text color */
+  font-weight: 600;
+  font-family: sans-serif;
+  white-space: nowrap; /* Prevents text wrapping */
+  display: inline-block; /* Ensures text stays on one line */
+  padding-left: 100%; /* Start scrolling from outside of the viewport */
+}
+
+.home-page h1 {
+  color: gray;
+  font-family: "Playfair Display", serif;
+}
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+.home-page .card {
+  background-color: rgba(128, 128, 128, 0.097);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Set a fixed height for cards */
+  margin: 10px; /* Add margin for spacing between cards */
+  box-sizing: border-box;
+  padding: 15px; /* Padding for consistent spacing inside the card */
+}
+
+.home-page .card-img-top {
+  /* height: 250px; Set a fixed height for images */
+  object-fit: cover; /* Maintain image aspect ratio */
+  width: 100%; /* Ensure images are the same width */
+}
+
+.home-page .card-body {
+  flex-grow: 1; /* Ensure the body grows to fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-page .card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3; /* Line height for uniform text */
+}
+
+.home-page .card-text {
+  color: rgb(90, 89, 89);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  /* Limits to 3 lines */
+  line-height: 1.4em;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  max-height: calc(1.4em * 3);
+}
+
+.home-page .card-price {
+  color: green;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.home-page .card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Pushes buttons to the bottom of the card */
+}
+
+.home-page .d-flex {
+  margin-top: auto;
+}
+
+.home-page .card .d-flex button {
+  width: 50%; /* Ensure both buttons take up equal space */
+}
+
+.home-page .card img:hover {
+  transform: scale(0.9);
+}
+
+.home-page .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .home-page button {
+  border-radius: 0;
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+} */
+
+/* Optional spacing between the buttons */
+/* .home-page .card .d-flex .btn-primary {
+  margin-right: 5px; 
+} */
+
+/* Optional spacing between the buttons */
+/* .home-page .card .d-flex .btn-secondary {
+  margin-left: 5px; 
+} */
+
+@media (max-width: 768px) {
+  .home-page .card-img-top {
+    height: 120px !important;
+  }
+  .home-page .card-body {
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page .card-img-top {
+    height: 150px !important;
+  }
+}
+
+/* ==================
+  filters
+  ============== */
+.filters h4 {
+  margin-top: 100px;
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 8px;
+}
+
+.ant-checkbox-wrapper {
+  margin: 2px;
+}
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+.filters button {
+  background-color: black;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.loadmore {
+  color: green;
+  font-weight: bold;
+  font-size: 20px !important;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px; /* You can adjust this value as per your design needs */
+  object-fit: cover; /* Ensures the images cover the area while maintaining aspect ratio */
+}
+
+/* Optional: Styling the caption text */
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .carousel-caption h3 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-item img {
+    height: 300px;
+  }
+}

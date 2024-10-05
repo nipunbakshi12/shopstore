@@ -18,7 +18,7 @@ function CreateCategory() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post(`https://shopstore-backend.vercel.app/api/v1/category/create-category`, { name })
+            const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/category/create-category`, { name })
             if (data?.success) {
                 toast.success(`${name} is created`)
                 getAllCategories()

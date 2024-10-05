@@ -20,7 +20,7 @@ const app = express();
 
 //middleware
 app.use(cors({
-    origin: ['https://shopstore-alpha.vercel.app'], // Adjust this based on your frontend URL
+    origin: ['https://shopstore-frontend.vercel.app'], // Adjust this based on your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Adjust allowed methods as needed
     credentials: true // Allow cookies to be sent across domains
 }));
